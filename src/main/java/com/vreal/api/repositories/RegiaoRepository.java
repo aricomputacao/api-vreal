@@ -6,6 +6,7 @@
 package com.vreal.api.repositories;
 
 import com.vreal.api.entities.Regiao;
+import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -17,4 +18,7 @@ public interface RegiaoRepository extends  JpaRepository<Regiao,Integer>{
     
     @Transactional(readOnly = true)
     Regiao findByNome(String nome);
+    
+    @Transactional(readOnly = true)
+    List<Regiao> findAllByOrderByIdAsc();
 }

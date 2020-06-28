@@ -6,6 +6,7 @@
 package com.vreal.api.repositories;
 
 import com.vreal.api.entities.Regiao;
+import java.util.List;
 import org.junit.jupiter.api.AfterEach;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.BeforeEach;
@@ -45,6 +46,12 @@ public class RegiaoRepositoryTest {
         Regiao regiao = this.regiaoRepository.findByNome(nome);
 
         assertEquals(nome, regiao.getNome());
+    }
+    @Test
+    public void testBuscarTodos() {
+        List<Regiao> lista = this.regiaoRepository.findAllByOrderByIdAsc();
+
+        assertEquals(false, lista.isEmpty());
     }
 
 }

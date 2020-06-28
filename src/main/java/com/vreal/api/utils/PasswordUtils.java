@@ -3,16 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.ssinformatica.nota.api.utils;
+package com.vreal.api.utils;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.test.context.ActiveProfiles;
 
 /**
  *
  * @author ari
  */
+
 public class PasswordUtils {
 
     private static final Logger log = LoggerFactory.getLogger(PasswordUtils.class);
